@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         <h4>${item.name}</h4>
                         <p>Price: ${item.price} ₴</p>
                         <p>Q-ty: ${item.quantity}</p>
-                        <a class="remove-item-button px-4 py-auto text-decoration-none">Remove x1</a>
-                        <a class="remove-item-button remove-all-items-button px-4 py-auto text-decoration-none">Remove All</a>
+                        <a class="remove-item-button py-auto text-decoration-none">Remove x1 |</a>
+                        <a class="remove-item-button remove-all-items-button py-auto text-decoration-none">Remove All</a>
                         <hr>
                     </div>`;
                 total += totalPrice;

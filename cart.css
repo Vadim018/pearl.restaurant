@@ -3,7 +3,7 @@ body {
     color: #FFF;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #BEDDFF, #FFEE9B, #FFEB86);
+    background: linear-gradient(to bottom, #ABCAFF, #FFFbb0, #FDE383, #FFEBB9);
     background-size: 400% 400%;
     overflow-x: hidden;
 }
@@ -39,19 +39,26 @@ body {
     text-align: center;
 }
 
-.card, .remove-item-button::before {
+.card,
+.remove-item-button::before {
     width: 50%;
 }
 
-.card, #cart-items {
+.card,
+#cart-items {
     padding: 20px;
 }
 
-.card, #cart-items {
+.card,
+#cart-items {
     border-radius: 10px;
 }
 
-h1, h4, p, #close-button, #cart-total {
+h1,
+h4,
+p,
+#close-button,
+#cart-total {
     color: #333;
 }
 
@@ -67,11 +74,14 @@ p {
     text-decoration: none;
 }
 
-#close-button, .remove-item-button::before {
+#close-button,
+.remove-item-button::before {
     position: absolute;
 }
 
-#close-button, .remove-item-button, #clear-cart-button {
+#close-button,
+.remove-item-button,
+#clear-cart-button {
     cursor: pointer;
 }
 
@@ -81,7 +91,8 @@ p {
     transition: opacity 0.3s ease;
 }
 
-#cart-items, #cart-total {
+#cart-items,
+#cart-total {
     margin: 10px;
 }
 
@@ -139,7 +150,8 @@ p {
         transition: none;
     }
 
-    #clear-cart-button, #clear-cart-button:hover {
+    #clear-cart-button,
+    #clear-cart-button:hover {
         border: none;
     }
 
@@ -147,7 +159,8 @@ p {
         right: 10px;
     }
 
-    .btn-success, .btn-danger {
+    .btn-success,
+    .btn-danger {
         width: 50%;
         margin: 5px;
     }
