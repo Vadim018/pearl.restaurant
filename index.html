@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Pearl Restaurant</title>
+    <title>◉ Pearl Restaurant</title>
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/128/939/939694.png">
 
     <meta charset="UTF-8">
@@ -14,138 +15,119 @@
 
     <link rel="stylesheet" href="index.css">
 </head>
-    <div id="loading-screen"></div>
+
 <body>
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="navbar-brand text-center">
-            <div class="lightbulb-container" id="lightbulb-container">
-                <audio id="light-switch-sound">
-                    <source src="switch.mp3" type="audio/mpeg">
-                </audio>
-                <div class="lightbulb light-switch" id="lightbulb">
-                    <img src="img/light-on2.png" id="lightbulb-image">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="navbar-brand text-center">
+                <div class="lightbulb-container" id="lightbulb-container">
+                    <audio id="light-switch-sound">
+                        <source src="switch.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="lightbulb light-switch" id="lightbulb">
+                        <img src="img/light-on2.png" id="lightbulb-image">
+                    </div>
                 </div>
             </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileMenu"
+                aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mobileMenu">
+                <ul class="navbar-nav ml-auto">
+                    <li><a class="btn-group-menu" href="info.html">Info</a></li>
+                    <li><a class="btn-group-menu" href="about.html">About</a></li>
+                    <li><a class="btn-group-menu" href="terms.html">Terms</a></li>
+                    <li><a class="btn-group-menu" href="login.html">Log In</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="menu-container">
+        <h2 id="menuTitle"></h2>
+    </div>
+    <div class="button-container">
+        <div class="category">
+            <a href="products.html" data-category="Burgers">
+                <img src="img/burgers.jpg">
+                <div class="category-name">Burgers</div>
+            </a>
         </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="mobileMenu">
-            <ul class="navbar-nav ml-auto">
-                <li><a class="btn-group-menu" href="info.html">Info</a></li>
-                <li><a class="btn-group-menu" href="about.html">About</a></li>
-                <li><a class="btn-group-menu" href="terms.html">Terms</a></li>
-                <li><a class="btn-group-menu" href="login.html">Log In</a></li>
-            </ul>
+        <div class="category">
+            <a href="products.html" data-category="Sushi">
+                <img src="img/sushi.jpg">
+                <div class="category-name">Sushi</div>
+            </a>
         </div>
-    </nav>
-</header>
-<div class="menu-container">
-    <h2 id="menuTitle"></h2>
-</div>
-<div class="button-container">
-    <div class="category">
-        <a href="products.html" data-category="Burgers">
-            <img src="img/burgers.jpg">
-            <div class="category-name">Burgers</div>
-        </a>
+        <div class="category">
+            <a href="products.html" data-category="Pizza">
+                <img src="img/pizza.jpg">
+                <div class="category-name">Pizza</div>
+            </a>
+        </div>
+        <div class="category">
+            <a href="products.html" data-category="Snacks">
+                <img src="img/snacks.jpg">
+                <div class="category-name">Snacks</div>
+            </a>
+        </div>
+        <div class="category">
+            <a href="products.html" data-category="Soups">
+                <img src="img/soups.jpg">
+                <div class="category-name">Soups</div>
+            </a>
+        </div>
+        <div class="category">
+            <a href="products.html" data-category="Salads">
+                <img src="img/salads.jpg">
+                <div class="category-name">Salads</div>
+            </a>
+        </div>
+        <div class="category">
+            <a href="products.html" data-category="Steaks">
+                <img src="img/steaks.jpg">
+                <div class="category-name">Steaks</div>
+            </a>
+        </div>
+        <div class="category">
+            <a href="products.html" data-category="Wine">
+                <img src="img/wine.jpg">
+                <div class="category-name">Wine</div>
+            </a>
+        </div>
+        <div class="category">
+            <a href="products.html" data-category="Desserts">
+                <img src="img/desserts.jpg">
+                <div class="category-name">Desserts</div>
+            </a>
+        </div>
+        <div class="category">
+            <a href="products.html" data-category="Ice">
+                <img src="img/ice.jpg">
+                <div class="category-name">Ice</div>
+            </a>
+        </div>
+        <div class="category">
+            <a href="products.html" data-category="Drinks">
+                <img src="img/drinks.jpg">
+                <div class="category-name">Drinks</div>
+            </a>
+        </div>
+        <div class="category">
+            <a href="products.html" data-category="Milkshakes">
+                <img src="img/milkshakes.jpg">
+                <div class="category-name">Milkshakes</div>
+            </a>
+        </div>
     </div>
-    <div class="category">
-        <a href="products.html" data-category="Sushi">
-            <img src="img/sushi.jpg">
-            <div class="category-name">Sushi</div>
-        </a>
-    </div>
-    <div class="category">
-        <a href="products.html" data-category="Pizza">
-            <img src="img/pizza.jpg">
-            <div class="category-name">Pizza</div>
-        </a>
-    </div>
-    <div class="category">
-        <a href="products.html" data-category="Snacks">
-            <img src="img/snacks.jpg">
-            <div class="category-name">Snacks</div>
-        </a>
-    </div>
-    <div class="category">
-        <a href="products.html" data-category="Soups">
-            <img src="img/soups.jpg">
-            <div class="category-name">Soups</div>
-        </a>
-    </div>
-    <div class="category">
-        <a href="products.html" data-category="Salads">
-            <img src="img/salads.jpg">
-            <div class="category-name">Salads</div>
-        </a>
-    </div>
-    <div class="category">
-        <a href="products.html" data-category="Steaks">
-            <img src="img/steaks.jpg">
-            <div class="category-name">Steaks</div>
-        </a>
-    </div>
-    <div class="category">
-        <a href="products.html" data-category="Wine">
-            <img src="img/wine.jpg">
-            <div class="category-name">Wine</div>
-        </a>
-    </div>
-    <div class="category">
-        <a href="products.html" data-category="Desserts">
-            <img src="img/desserts.jpg">
-            <div class="category-name">Desserts</div>
-        </a>
-    </div>
-    <div class="category">
-        <a href="products.html" data-category="Ice">
-            <img src="img/ice.jpg">
-            <div class="category-name">Ice</div>
-        </a>
-    </div>
-    <div class="category">
-        <a href="products.html" data-category="Drinks">
-            <img src="img/drinks.jpg">
-            <div class="category-name">Drinks</div>
-        </a>
-    </div>
-    <div class="category">
-        <a href="products.html" data-category="Milkshakes">
-            <img src="img/milkshakes.jpg">
-            <div class="category-name">Milkshakes</div>
-        </a>
-    </div>
-</div>
-<button id="backToTopBtn" onclick="backToTop()">
-    <img src="https://cdn-icons-png.flaticon.com/128/3388/3388435.png">
-</button>
-<hr>
-<footer>
-    <div class="social">
-        <a href="https://www.facebook.com/" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/128/20/20673.png" title="Facebook">
-        </a>
-        <a href="https://www.instagram.com/" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/128/1384/1384015.png" title="Instagram">
-        </a>
-        <a href="https://twitter.com/" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/128/25/25660.png" title="Twitter">
-        </a>
-        <a href="https://www.pinterest.ca/" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/128/25/25698.png" title="Pinterest">
-        </a>
-        <a href="https://www.youtube.com/" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/128/49/49084.png" title="YouTube">
-        </a>
-    </div>
-    <p class="copyright">&copy; All rights reserved</p>
-    <br>
-</footer>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="index.js"></script>
+    <button id="backToTopBtn" onclick="backToTop()">
+        <img src="https://cdn-icons-png.flaticon.com/128/3388/3388435.png">
+    </button>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>

@@ -1,19 +1,13 @@
 body {
     font-family: 'Playpen Sans', cursive;
-    background: linear-gradient(to right, #76D6FF, #2AC5FD);
+    background: linear-gradient(60deg, #83DAFF, #00BBFF);
     background-size: 400% 400%;
     animation: gradientBG 5s infinite;
     overflow-x: hidden;
     margin: 0;
 }
 
-#loading-screen {
-    background-color: #FFF;
-    z-index: 99999;
-    transition: opacity 0.5s ease-in-out;
-}
-
-#loading-screen, #backToTopBtn {
+#backToTopBtn {
     position: fixed;
 }
 
@@ -21,11 +15,17 @@ body {
     opacity: 0 !important;
 }
 
-body, #backToTopBtn {
+body,
+#backToTopBtn {
     padding: 0;
 }
 
-body, .btn-group-menu:hover, .category-name, .new-icon, .btn-group-menu, #backToTopBtn {
+body,
+.btn-group-menu:hover,
+.category-name,
+.new-icon,
+.btn-group-menu,
+#backToTopBtn {
     color: #FFF;
 }
 
@@ -37,20 +37,26 @@ h2 {
     font-size: 72px;
 }
 
-h2, .btn-group-menu, .button-container a, .category {
+h2,
+.btn-group-menu,
+.button-container a,
+.category {
     text-align: center;
 }
 
-button.navbar-toggler-icon, #backToTopBtn {
+button.navbar-toggler-icon,
+#backToTopBtn {
     border: none;
 }
 
-button.navbar-toggler-icon, #backToTopBtn {
+button.navbar-toggler-icon,
+#backToTopBtn {
     outline: none;
     box-shadow: none;
 }
 
-.navbar .navbar-nav, .menu-container, #loading-screen {
+.navbar .navbar-nav,
+.menu-container {
     display: flex;
 }
 
@@ -59,16 +65,22 @@ button.navbar-toggler-icon, #backToTopBtn {
     padding: 20px;
 }
 
-.navbar .navbar-nav, .menu-container, #loading-screen {
+.navbar .navbar-nav,
+.menu-container {
     align-items: center;
 }
 
-.navbar .navbar-nav, .dark-background, .btn-group-menu::before, .button-container img, .category img, #loading-screen,
+.navbar .navbar-nav,
+.dark-background,
+.btn-group-menu::before,
+.button-container img,
+.category img,
 .btn-group-menu:hover::before {
     width: 100%;
 }
 
-.navbar a, .button-container a {
+.navbar a,
+.button-container a {
     text-decoration: none;
 }
 
@@ -79,15 +91,23 @@ button.navbar-toggler-icon, #backToTopBtn {
     transition: transform 0.3s ease, top 0.3s ease;
 }
 
-.lightbulb-container, #backToTopBtn {
+.lightbulb-container,
+#backToTopBtn {
     z-index: 9999;
 }
 
-.lightbulb-container, .category, #backToTopBtn {
+.lightbulb-container,
+.category,
+#backToTopBtn {
     cursor: pointer;
-} 
+}
 
-.lightbulb-container, .dark-background, .btn-group-menu::before, .category::before, .category-name, .new-icon {
+.lightbulb-container,
+.dark-background,
+.btn-group-menu::before,
+.category::before,
+.category-name,
+.new-icon {
     position: absolute;
 }
 
@@ -95,7 +115,8 @@ button.navbar-toggler-icon, #backToTopBtn {
     left: 50%;
 }
 
-.lightbulb, .btn-group-menu::before {
+.lightbulb,
+.btn-group-menu::before {
     transition: transform 0.3s ease;
 }
 
@@ -107,19 +128,23 @@ button.navbar-toggler-icon, #backToTopBtn {
     transform: translateX(-40px);
 }
 
-.lightbulb-container.show-lightbulb, .dark-background, .category::before, #loading-screen {
+.lightbulb-container.show-lightbulb,
+.dark-background,
+.category::before {
     top: 0;
 }
 
-.hide-lightbulb-button, #backToTopBtn {
+.hide-lightbulb-button,
+#backToTopBtn {
     display: none;
 }
 
-.lightbulb-container:not(.show-lightbulb) .hide-lightbulb-button, .btn-group-menu {
+.lightbulb-container:not(.show-lightbulb) .hide-lightbulb-button,
+.btn-group-menu {
     display: block;
 }
 
-#loading-screen, .dark-background {
+.dark-background {
     height: 100%;
 }
 
@@ -128,7 +153,10 @@ button.navbar-toggler-icon, #backToTopBtn {
     z-index: 1;
 }
 
-.dark-background, .btn-group-menu::before, .btn-group-menu:hover::before, .category::before, #loading-screen {
+.dark-background,
+.btn-group-menu::before,
+.btn-group-menu:hover::before,
+.category::before {
     left: 0;
 }
 
@@ -142,11 +170,13 @@ button.navbar-toggler-icon, #backToTopBtn {
     box-sizing: border-box;
 }
 
-.btn-group-menu, .category {
+.btn-group-menu,
+.category {
     position: relative;
 }
 
-.btn-group-menu, .new-icon {
+.btn-group-menu,
+.new-icon {
     font-size: 24px;
 }
 
@@ -168,15 +198,20 @@ button.navbar-toggler-icon, #backToTopBtn {
     left: 0;
 }
 
-.btn-group-menu::before, .new-icon {
+.btn-group-menu::before,
+.new-icon {
     border-radius: 5px;
 }
 
-.btn-group-menu::before, .category::before, .category-name {
+.btn-group-menu::before,
+.category::before,
+.category-name {
     opacity: 0;
 }
 
-.btn-group-menu:hover::before, .category:hover::before, .category:hover .category-name, #loading-screen {
+.btn-group-menu:hover::before,
+.category:hover::before,
+.category:hover .category-name {
     opacity: 1;
 }
 
@@ -190,7 +225,7 @@ button.navbar-toggler-icon, #backToTopBtn {
     margin: auto;
 }
 
-.menu-container, #loading-screen {
+.menu-container {
     justify-content: center;
 }
 
@@ -211,12 +246,14 @@ button.navbar-toggler-icon, #backToTopBtn {
     background: rgba(0, 0, 0, 0.8);
 }
 
-.category::before, .category-name {
+.category::before,
+.category-name {
     transition: opacity 0.5s;
     pointer-events: none;
 }
 
-.category:hover::before, .category-name {
+.category:hover::before,
+.category-name {
     z-index: 999;
 }
 
@@ -276,22 +313,8 @@ button.navbar-toggler-icon, #backToTopBtn {
     transform: scale(1.2) rotateY(360deg);
 }
 
-.copyright {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 10px auto;
-    font-size: 24px;
-    color: #000;
-}
-
 .dark-background .social {
     filter: invert(100%);
-}
-
-.dark-background .copyright {
-    color: #FFF;
 }
 
 @keyframes pulse {
@@ -364,11 +387,13 @@ button.navbar-toggler-icon, #backToTopBtn {
         border-radius: 0;
     }
 
-    .btn-group-menu, .new-icon {
+    .btn-group-menu,
+    .new-icon {
         font-size: 18px;
     }
 
-    .lightbulb, .btn-group-menu::before {
+    .lightbulb,
+    .btn-group-menu::before {
         display: none;
     }
 
@@ -390,7 +415,8 @@ button.navbar-toggler-icon, #backToTopBtn {
         z-index: 999;
     }
 
-    .category-name, .category::before {
+    .category-name,
+    .category::before {
         opacity: 1;
     }
 
@@ -408,9 +434,5 @@ button.navbar-toggler-icon, #backToTopBtn {
 
     .social img:hover {
         transform: none;
-    }
-
-    .copyright {
-        font-size: 18px;
     }
 }
