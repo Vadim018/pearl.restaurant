@@ -6,27 +6,14 @@ body {
     overflow-x: hidden;
 }
 
-#loading-screen {
-    background-color: #FFF;
-    z-index: 99999;
-    transition: opacity 0.5s ease-in-out;
-    justify-content: center;
-}
-
-#loading-screen,
 #backToTopBtn {
     position: fixed;
 }
 
-#loading-screen,
 .dark-background {
     top: 0;
     left: 0;
     height: 100%;
-}
-
-.fade-out {
-    opacity: 0 !important;
 }
 
 body,
@@ -106,14 +93,12 @@ header {
 }
 
 .buttons,
-.restaurant-card,
-#loading-screen {
+.restaurant-card {
     display: flex;
 }
 
 .buttons,
-.restaurant-card,
-#loading-screen {
+.restaurant-card {
     align-items: center;
 }
 
@@ -146,8 +131,7 @@ header {
 }
 
 .restaurant-card.active,
-.active,
-#loading-screen {
+.active {
     opacity: 1;
     transform: translateY(0);
 }
@@ -211,42 +195,6 @@ header {
 
 #backToTopBtn:hover {
     box-shadow: 0 0 20px rgba(255, 255, 255, 255);
-}
-
-.social {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    height: 100px;
-    margin: 10px auto;
-}
-
-.social img {
-    width: 50px;
-    transition: transform 1s ease;
-}
-
-.social img:hover {
-    transform: scale(1.2) rotateY(360deg);
-}
-
-.copyright {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 10px auto;
-    font-size: 24px;
-    color: #000;
-}
-
-.dark-background .social {
-    filter: invert(100%);
-}
-
-.dark-background .copyright {
-    color: #FFF;
 }
 
 @keyframes gradientBG {
@@ -342,17 +290,5 @@ header {
 
     .lifted {
         transform: translateY(0);
-    }
-
-    .social img {
-        width: 30px;
-    }
-
-    .social img:hover {
-        transform: none;
-    }
-
-    .copyright {
-        font-size: 18px;
     }
 }

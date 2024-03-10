@@ -40,7 +40,7 @@ window.addEventListener('load', handleScrollUp);
 
 document.addEventListener("DOMContentLoaded", function () {
   const backToTopBtn = document.getElementById("backToTopBtn");
-  
+
   backToTopBtn.addEventListener("click", function () {
     scrollToTopWithEasing();
   });
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const currentTime = timestamp - startTime;
       const scrollProgress = Math.min(currentTime / scrollDuration, 1);
       const easeInOutProgress = easeInOutQuad(scrollProgress);
-      
+
       window.scrollTo(0, startScrollTop * (1 - easeInOutProgress));
       if (currentTime < scrollDuration) {
         requestAnimationFrame(scrollStep);
@@ -98,23 +98,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  setTimeout(function () {
-    document.getElementById("loading-screen").style.opacity = 0;
-    setTimeout(function () {
-      document.getElementById("loading-screen").style.display = "none";
-    }, 500);
-  }, 0);
 });
 
-document.addEventListener("click", function (event) {
-  if (event.target.tagName === "A") {
-    event.preventDefault();
-    document.getElementById("loading-screen").classList.add("fade-out");
-    setTimeout(function () {
-      window.location.href = event.target.href;
-    }, 0);
-  }
-});
 
 const lightbulbContainer = document.getElementById('lightbulb-container');
 const lightbulb = document.getElementById('lightbulb');
@@ -124,63 +109,63 @@ const body = document.body;
 const audioElement = document.getElementById('light-switch-sound');
 
 function saveThemeState(isLightOn) {
-    localStorage.setItem('isLightOn', isLightOn.toString());
+  localStorage.setItem('isLightOn', isLightOn.toString());
 }
 
 function setInitialState() {
-    const isLightOn = localStorage.getItem('isLightOn');
+  const isLightOn = localStorage.getItem('isLightOn');
 
-    if (isLightOn === 'true') {
-        turnOffLight();
-    } else {
-        turnOnLight();
-    }
+  if (isLightOn === 'true') {
+    turnOffLight();
+  } else {
+    turnOnLight();
+  }
 }
 
 function turnOnLight() {
-    lightbulbImage.src = 'https://cdn-icons-png.flaticon.com/128/3073/3073665.png?uid=R77081381&ga=GA1.1.1848467976.1701626084&semt=ais';
-    body.classList.remove('dark-background');
-    saveThemeState(false);
+  lightbulbImage.src = 'https://cdn-icons-png.flaticon.com/128/3073/3073665.png?uid=R77081381&ga=GA1.1.1848467976.1701626084&semt=ais';
+  body.classList.remove('dark-background');
+  saveThemeState(false);
 }
 
 function turnOffLight() {
-    lightbulbImage.src = 'https://cdn-icons-png.flaticon.com/128/3592/3592067.png?uid=R77081381&ga=GA1.1.1848467976.1701626084&semt=ais';
-    body.classList.add('dark-background');
-    saveThemeState(true);
+  lightbulbImage.src = 'https://cdn-icons-png.flaticon.com/128/3592/3592067.png?uid=R77081381&ga=GA1.1.1848467976.1701626084&semt=ais';
+  body.classList.add('dark-background');
+  saveThemeState(true);
 }
 
 function toggleLightbulb() {
-    const isLightOn = body.classList.contains('dark-background');
-    audioElement.currentTime = 0;
+  const isLightOn = body.classList.contains('dark-background');
+  audioElement.currentTime = 0;
 
-    if (isLightOn) {
-        turnOnLight();
-    } else {
-        turnOffLight();
-    }
+  if (isLightOn) {
+    turnOnLight();
+  } else {
+    turnOffLight();
+  }
 
-    setTimeout(() => {
-      audioElement.play();
-    }, 0);
+  setTimeout(() => {
+    audioElement.play();
+  }, 0);
 }
 
 window.addEventListener('beforeunload', () => {
-    saveThemeState(body.classList.contains('dark-background'));
+  saveThemeState(body.classList.contains('dark-background'));
 });
 
 setInitialState();
 
 lightbulbContainer.addEventListener('mouseenter', () => {
-    lightbulbContainer.classList.add('show-lightbulb');
+  lightbulbContainer.classList.add('show-lightbulb');
 });
 
 lightbulbContainer.addEventListener('mouseleave', () => {
-    lightbulbContainer.classList.remove('show-lightbulb');
+  lightbulbContainer.classList.remove('show-lightbulb');
 });
 
 lightbulb.addEventListener('click', toggleLightbulb);
 toggleButton.addEventListener('click', () => {
-    lightbulbContainer.classList.remove('show-lightbulb');
+  lightbulbContainer.classList.remove('show-lightbulb');
 });
 
 document.addEventListener('DOMContentLoaded', setInitialState);
