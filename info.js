@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const currentTime = timestamp - startTime;
             const scrollProgress = Math.min(currentTime / scrollDuration, 1);
             const easeInOutProgress = easeInOutQuad(scrollProgress);
-            
+
             window.scrollTo(0, startScrollTop * (1 - easeInOutProgress));
             if (currentTime < scrollDuration) {
                 requestAnimationFrame(scrollStep);
@@ -72,23 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-setTimeout(function () {
-    document.getElementById("loading-screen").style.opacity = 0;
-    setTimeout(function () {
-        document.getElementById("loading-screen").style.display = "none";
-    }, 500);
-}, 0);
-
-document.addEventListener("click", function (event) {
-    if (event.target.tagName === "A") {
-        event.preventDefault();
-        document.getElementById("loading-screen").classList.add("fade-out");
-        setTimeout(function () {
-            window.location.href = event.target.href;
-        }, 0);
-    }
-});
-
 const lightbulbContainer = document.getElementById('lightbulb-container');
 const lightbulb = document.getElementById('lightbulb');
 const lightbulbImage = document.getElementById('lightbulb-image');
@@ -133,7 +116,7 @@ function toggleLightbulb() {
     }
     setTimeout(() => {
         audioElement.play();
-      }, 0);
+    }, 0);
 }
 
 window.addEventListener('beforeunload', () => {

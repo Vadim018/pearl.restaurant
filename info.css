@@ -58,17 +58,6 @@ body {
   font-weight: normal;
 }
 
-#loading-screen {
-  background-color: #FFF;
-  z-index: 99999;
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.fade-out {
-  opacity: 0 !important;
-}
-
 body,
 .dark-background h1,
 .dark-background .condition ul li,
@@ -131,14 +120,12 @@ header {
   z-index: 1;
 }
 
-.dark-background,
-#loading-screen {
+.dark-background {
   width: 100%;
 }
 
 body,
-.dark-background,
-#loading-screen {
+.dark-background {
   height: 100%;
 }
 
@@ -157,13 +144,11 @@ body,
   cursor: pointer;
 }
 
-.dark-background,
-#loading-screen {
+.dark-background {
   top: 0;
 }
 
-.dark-background,
-#loading-screen {
+.dark-background {
   left: 0;
 }
 
@@ -184,14 +169,12 @@ body,
 .buttons,
 .del-pay-section,
 .condition,
-.opening-hours-wrapper,
-#loading-screen {
+.opening-hours-wrapper {
   display: flex;
 }
 
 .buttons,
-.condition,
-#loading-screen {
+.condition {
   align-items: center;
 }
 
@@ -287,8 +270,7 @@ body,
   transform: scale(1.1);
 }
 
-.icon,
-.social-links img {
+.icon {
   width: 50px;
 }
 
@@ -300,8 +282,7 @@ body,
   margin-top: 50px;
 }
 
-.opening-hours-wrapper,
-#loading-screen {
+.opening-hours-wrapper {
   justify-content: center;
 }
 
@@ -344,8 +325,7 @@ body,
   display: none;
 }
 
-#backToTopBtn,
-#loading-screen {
+#backToTopBtn {
   position: fixed;
 }
 
@@ -368,40 +348,6 @@ body,
 
 #backToTopBtn:hover {
   box-shadow: 0 0 20px rgba(255, 255, 255, 255);
-}
-
-.social {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  height: 100px;
-}
-
-.social img {
-  width: 50px;
-  transition: transform 1s ease;
-}
-
-.social img:hover {
-  transform: scale(1.2) rotateY(360deg);
-}
-
-.copyright {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 24px;
-  color: #000;
-}
-
-.dark-background .social {
-  filter: invert(100%);
-}
-
-.dark-background .copyright {
-  color: #FFF;
 }
 
 @keyframes gradientBG {
@@ -514,10 +460,6 @@ body,
     margin: 10px;
   }
 
-  .social-links a:hover {
-    transform: none;
-  }
-
   #backToTopBtn img {
     width: 50px;
   }
@@ -528,18 +470,6 @@ body,
 
   #backToTopBtn:hover {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-  }
-
-  .social img {
-    width: 35px;
-  }
-
-  .social img:hover {
-    transform: none;
-  }
-
-  .copyright {
-    font-size: 18px;
   }
 
   .contact-section {
