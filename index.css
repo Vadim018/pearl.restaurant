@@ -300,7 +300,10 @@ h2 {
         font-size: 18px;
     }
 
-    .lightbulb,
+    .lightbulb {
+        display: none;
+    }
+
     .btn-group-menu::before {
         display: none;
     }

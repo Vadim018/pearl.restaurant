@@ -9,6 +9,7 @@ function isElementInViewport(el) {
 
 function handleScrollDown() {
   restaurantCards.forEach((card) => {
+
     if (isElementInViewport(card)) {
       card.classList.add('active');
     }
@@ -17,6 +18,7 @@ function handleScrollDown() {
 
 function handleScrollUp() {
   restaurantCards.forEach((card) => {
+
     if (isElementInViewport(card)) {
       card.classList.add('active');
     } else {
@@ -40,7 +42,6 @@ window.addEventListener('load', handleScrollUp);
 
 document.addEventListener("DOMContentLoaded", function () {
   const backToTopBtn = document.getElementById("backToTopBtn");
-
   backToTopBtn.addEventListener("click", function () {
     scrollToTopWithEasing();
   });
@@ -54,8 +55,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const currentTime = timestamp - startTime;
       const scrollProgress = Math.min(currentTime / scrollDuration, 1);
       const easeInOutProgress = easeInOutQuad(scrollProgress);
-
       window.scrollTo(0, startScrollTop * (1 - easeInOutProgress));
+
       if (currentTime < scrollDuration) {
         requestAnimationFrame(scrollStep);
       }
@@ -68,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   window.addEventListener("scroll", function () {
+
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
       backToTopBtn.style.display = "block";
     } else {
@@ -82,7 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener("mouseover", () => {
       icons[index].style.display = "inline-block";
     });
-
     button.addEventListener("mouseout", () => {
       icons[index].style.display = "none";
     });
@@ -97,9 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
       $(this).find(".menu-icon").css("opacity", 0);
     });
   });
-
 });
-
 
 const lightbulbContainer = document.getElementById('lightbulb-container');
 const lightbulb = document.getElementById('lightbulb');
@@ -143,7 +142,6 @@ function toggleLightbulb() {
   } else {
     turnOffLight();
   }
-
   setTimeout(() => {
     audioElement.play();
   }, 0);
