@@ -110,3 +110,54 @@ header {
     background-position: 0% 50%;
   }
 }
+
+@media screen and (max-width: 720px) {
+  body {
+    width: 100%;
+  }
+
+  header {
+    height: 150px;
+  }
+
+  .buttons {
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    margin: 100px;
+  }
+
+  .buttons a {
+    border: none;
+    font-size: 18px;
+    padding: 0;
+  }
+
+  .lightbulb-container {
+    display: block;
+  }
+
+  .buttons a:hover {
+    color: transparent;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .lightbulb img {
+    width: 70px;
+  }
+
+  #backToTopBtn img {
+    width: 50px;
+  }
+
+  #backToTopBtn {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+
+  #backToTopBtn:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+}
