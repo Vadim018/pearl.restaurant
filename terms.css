@@ -96,7 +96,7 @@ p {
     margin: 10px;
 }
 
-@media screen and (max-width: 720px) {    
+@media screen and (max-width: 720px) {
     .home img {
         top: 20px;
         left: 10px;
@@ -120,5 +120,17 @@ p {
         margin-top: 100px;
         margin-left: 5px;
         margin-right: 5px;
+    }
+
+    ol {
+        margin: auto;
+    }
+
+    .block {
+        border: 5px inset #8D8D8D;
+    }
+
+    .block1 {
+        border: 5px inset #8D8D8D;
     }
 }
