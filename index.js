@@ -70,7 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 $(document).ready(function () {
   $(".btn-group-menu").hover(function () {
     $(this).find(".menu-text").css("opacity", 0);
