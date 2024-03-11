@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const currentTime = timestamp - startTime;
       const scrollProgress = Math.min(currentTime / scrollDuration, 1);
       const easeInOutProgress = easeInOutQuad(scrollProgress);
-
       window.scrollTo(0, startScrollTop * (1 - easeInOutProgress));
+
       if (currentTime < scrollDuration) {
         requestAnimationFrame(scrollStep);
       }
@@ -45,11 +45,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const menuTitle = document.getElementById("menuTitle");
-  const textToType = "Restaurant's Menu";
+  const textToType = "WELCOME!";
 
   function typeText() {
     let index = 0;
-    const interval = 200;
+    const interval = 300;
 
     const typingInterval = setInterval(() => {
       if (index <= textToType.length) {
