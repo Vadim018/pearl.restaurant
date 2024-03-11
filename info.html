@@ -2,138 +2,16 @@
 <html>
 
 <head>
-    <title>Info</title>
+    <title>Forum</title>
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/128/939/939694.png">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="info.css">
 </head>
 
-
 <body>
-    <header>
-        <nav class="navbar">
-            <audio id="light-switch-sound">
-                <source src="switch.mp3" type="audio/mpeg">
-            </audio>
-            <div class="lightbulb-container" id="lightbulb-container">
-                <div class="lightbulb" id="lightbulb">
-                    <img src="https://cdn-icons-png.flaticon.com/128/3073/3073665.png?uid=R77081381&ga=GA1.1.1848467976.1701626084&semt=ais"
-                        id="lightbulb-image" class="lightbulb-img">
-                </div>
-            </div>
-        </nav>
-        <div class="buttons">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="terms.html">Terms</a>
-        </div>
-    </header>
-    <h1><i class="fas fa-truck"></i> Delivery & Payment</h1>
-    <section class="del-pay-section">
-        <div class="condition">
-            <div class="icon"><img
-                    src="https://cdn-icons-png.flaticon.com/128/10725/10725070.png?uid=R77081381&ga=GA1.1.1848467976.1701626084&semt=ais">
-            </div>
-
-            <h2>Delivery Conditions</h2>
-            <ul>
-                <li>> Delivery is provided by "Fast Food" service. It costs 55 ₴.</li>
-                <li>> You can select "Self-Pickup" and pick up order youself.</li>
-            </ul>
-        </div>
-        <div class="condition">
-            <div class="icon"><img
-                    src="https://cdn-icons-png.flaticon.com/128/10759/10759041.png?uid=R77081381&ga=GA1.1.1848467976.1701626084&semt=ais">
-            </div>
-
-            <h2>Payment Conditions</h2>
-            <ul>
-                <li>> Card online Visa or PayPal.</li>
-                <li>> Cash on delivery or pick up.</li>
-            </ul>
-        </div>
-        <div class="condition additional-condition">
-            <div class="icon"><img
-                    src="https://cdn-icons-png.flaticon.com/128/1156/1156949.png?uid=R77081381&ga=GA1.1.1848467976.1701626084&semt=ais">
-            </div>
-
-            <h2>Additional Conditions</h2>
-            <ul>
-                <li>> If you choose "Self-Pickup" during payment, we'll call you when the order is ready.</li>
-                <li>> "Self-Pickup" is available from 10:00 to 20:00 p.m. every day.</li>
-                <li>> Delivery time depends on the volume of your order.</li>
-            </ul>
-        </div>
-    </section>
-    <section class="opening-hours">
-        <h1><i class="fas fa-clock"></i> Schedule</h1>
-        <div class="opening-hours-wrapper">
-            <div class="opening-hours-grid">
-                <div class="opening-hours-item">
-                    <span>Monday</span>
-                    <span>10:00 - 22:00</span>
-                </div>
-                <div class="opening-hours-item">
-                    <span>Tuesday</span>
-                    <span>10:00 - 22:00</span>
-                </div>
-                <div class="opening-hours-item">
-                    <span>Wednesday</span>
-                    <span>10:00 - 22:00</span>
-                </div>
-                <div class="opening-hours-item">
-                    <span>Thursday</span>
-                    <span>10:00 - 22:00</span>
-                </div>
-                <div class="opening-hours-item">
-                    <span>Friday</span>
-                    <span>10:00 - 22:00</span>
-                </div>
-                <div class="opening-hours-item">
-                    <span>Saturday</span>
-                    <span>10:00 - 22:00</span>
-                </div>
-                <div class="opening-hours-item full-width">
-                    <span>Sunday</span>
-                    <span>10:00 - 22:00</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="contacts_section">
-        <div class="contact-section">
-            <h1><i class="fa fa-phone"></i> Contacts</h1>
-            <div class="contact-info">
-                <p class="phones">
-                    <a href="tel:0671111111">067 111 1111</a>
-                    <span class="tild">|</span>
-                    <a href="tel:0971111111">097 111 1111</a>
-                </p>
-                <p><a href="mailto:admin@example.com">nodeJS@gmail.com</a></p>
-                <p>Kyiv Street, Kyiv</p>
-            </div>
-        </div>
-    </section>
-
-    <button id="backToTopBtn" onclick="backToTop()">
-        <img src="https://cdn-icons-png.flaticon.com/128/3388/3388435.png">
-    </button>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="info.js"></script>
 </body>
 
