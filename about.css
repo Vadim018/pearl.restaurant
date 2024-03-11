@@ -152,7 +152,10 @@ h2 {
 .dark-background {
     top: 0;
     left: 0;
-    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1;
 }
 
 .dark-background .card-text {
@@ -161,12 +164,6 @@ h2 {
 
 .dark-background h2 {
     color: #FFF;
-}
-
-.dark-background {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 1;
 }
 
 .lifted {

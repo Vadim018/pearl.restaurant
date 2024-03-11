@@ -4,14 +4,41 @@
 <head>
     <title>Forum</title>
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/128/939/939694.png">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="info.css">
 </head>
 
 <body>
+    <header>
+        <nav class="navbar">
+            <audio id="light-switch-sound">
+                <source src="switch.mp3" type="audio/mpeg">
+            </audio>
+            <div class="lightbulb-container" id="lightbulb-container">
+                <div class="lightbulb" id="lightbulb">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3073/3073665.png?uid=R77081381&ga=GA1.1.1848467976.1701626084&semt=ais"
+                        id="lightbulb-image" class="lightbulb-img">
+                </div>
+            </div>
+        </nav>
+        <div class="buttons">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="terms.html">Terms</a>
+        </div>
+    </header>
+    <button id="backToTopBtn" onclick="backToTop()">
+        <img src="https://cdn-icons-png.flaticon.com/128/3388/3388435.png">
+    </button>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="info.js"></script>
 </body>
 
