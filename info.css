@@ -7,6 +7,12 @@ body {
   color: #FFF;
   margin: 0;
   padding: 0;
+  user-select: none;
+}
+
+h4 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 36px;
 }
 
 /* HEADER */
@@ -71,41 +77,39 @@ h3 {
 }
 
 /* DELIVERY */
+.delivery {
+  margin: 10px;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.col-lg-4 img {
+  width: 100px;
+  margin: 20px auto;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.col-lg-4 img:hover {
+  transform: scale(1.2);
+}
+
+.lines img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  filter: invert(100%);
+}
+
+/* SCHEDULE */
 .container {
   border: 5px solid #333;
   border-radius: 15px;
   margin: auto;
 }
 
-.row {
-  padding: 5px;
-}
-
-.feature img {
-  width: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: transform 0.5s ease-in-out;
-  margin: 20px auto;
-}
-
-.feature img:hover {
-  transform: scale(1.2);
-}
-
-.feature p {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  font-size: 24px;
-  color: #333;
-  margin: 20px;
-  width: 100%;
-}
-
-/* SCHEDULE */
 .card {
   background-color: transparent;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5), 0 0 20px 10px rgba(0, 0, 0, 0.3);
@@ -113,11 +117,40 @@ h3 {
 }
 
 .card-text {
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+}
+
+/* CONTACTS */
+.contact-section {
+  width: 50%;
+  margin: 20px auto;
+  border: 5px solid #333;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  user-select: text;
+}
+
+.contact-info {
   font-size: 24px;
   color: #333;
+  margin: 20px auto;
+}
+
+.contact-info a {
+  color: #333;
+  text-decoration: underline;
+}
+
+.contact-info p {
+  display: inline-block;
+  margin: 0;
+  color: #FFF;
 }
 
 /* BACK TO TOP BUTTON */
@@ -167,15 +200,64 @@ h3 {
 }
 
 .dark-background h3 {
-  color: #999;
+  color: #BEF7FF;
 }
 
 .dark-background p {
-  color: #999;
+  color: #BEF7FF;
 }
 
-.dark-background .container {
-  border: 5px solid #999;
+.dark-background .contact-info a,
+.contact-info {
+  color: #FFC65C;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #333;
+  color: #FFF;
+  padding: 20px;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px auto;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  display: inline;
+  margin: 50px;
+  font-size: 24px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.footer-social {
+  font-size: 36px;
+}
+
+.social-icon {
+  color: #FFF;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #F00;
 }
 
 @keyframes gradientBG {
@@ -205,21 +287,21 @@ h3 {
     font-size: 36px;
   }
 
-  .feature img {
-    width: 50px;
+  .lines img {
+    width: 200px;
   }
 
-  .feature {
-    flex-basis: 100%;
+  .contact-section {
+    width: 100%;
+    border: none;
   }
 
-  .feature img:hover {
-    transform: scale(1);
-  }
-
-  .feature p {
+  .contact-info a {
     font-size: 18px;
-    margin: 10px;
+  }
+
+  .contact-info {
+    font-size: 18px;
   }
 
   .dark-background .container {
@@ -232,10 +314,17 @@ h3 {
   }
 
   .row {
-    padding: 2px;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .col-lg-4 img {
+    width: 70px;
+  }
+
+  .col-lg-4 img:hover {
+    transform: none;
   }
 
   .buttons {
@@ -277,5 +366,29 @@ h3 {
 
   #backToTopBtn:hover {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 20px auto;
+  }
+
+  .footer-links ul li a {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  .social-icon {
+    margin: 20px;
+  }
+
+  .social-icon:hover {
+    color: #FFF;
   }
 }
