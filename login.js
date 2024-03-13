@@ -15,9 +15,9 @@ function validateLogin() {
     alert('Please fill in all fields!');
   } else {
     alert('Successful!');
-    setTimeout(function() {
+    setTimeout(function () {
       window.location.href = "index.html";
-  }, 1000);
+    }, 1000);
   }
 }
 
@@ -34,21 +34,4 @@ togglePasswordButton.addEventListener('click', function () {
   passwordInput.setAttribute('type', type);
   const iconSrc = isPasswordVisible ? unlockIcon : lockIcon;
   togglePasswordButton.innerHTML = `<img src="${iconSrc}" alt="Toggle Password">`;
-});
-
-setTimeout(function () {
-  document.getElementById("loading-screen").style.opacity = 0;
-  setTimeout(function () {
-    document.getElementById("loading-screen").style.display = "none";
-  }, 500);
-}, 0);
-
-document.addEventListener("click", function (event) {
-  if (event.target.tagName === "A") {
-    event.preventDefault();
-    document.getElementById("loading-screen").classList.add("fade-out");
-    setTimeout(function () {
-      window.location.href = event.target.href;
-    }, 0);
-  }
 });

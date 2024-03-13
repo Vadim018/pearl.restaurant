@@ -1,45 +1,22 @@
 body {
-    font-family: 'Playpen Sans', cursive;  
+    font-family: 'Playpen Sans', cursive;
     margin: 0;
     padding: 0;
     background: #FFF6C1;
     overflow-x: hidden;
 }
 
-#loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #FFF;
-    z-index: 99999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.fade-out {
-    opacity: 0 !important;
-}
-
-body, 
-.new-icon, 
-.dark-background h1, 
-.dark-background p, 
-.dark-background 
-.quantity-button,
-.dark-background 
-.quantity-input, 
-.dark-background 
-#cart-item-count, 
-.dark-background 
-.radio,
+body,
+.new-icon,
+.dark-background h1,
+.dark-background p,
+.dark-background .quantity-button,
+.dark-background .quantity-input,
+.dark-background #cart-item-count,
+.dark-background .radio,
 .add-to-cart-button,
 #clock {
-  color: #FFF;
+    color: #FFF;
 }
 
 header {
@@ -49,7 +26,8 @@ header {
     z-index: 3;
 }
 
-header, .dark-background {
+header,
+.dark-background {
     background-color: #333;
 }
 
@@ -78,7 +56,7 @@ section,
 #sushi-logo,
 #steak-logo,
 .hide-lightbulb-button {
-  display: none;
+    display: none;
 }
 
 #pizza-logo,
@@ -90,13 +68,13 @@ section,
 #milkshake-logo,
 #icecream-logo,
 #wine-logo,
-#sushi-logo, 
+#sushi-logo,
 #steak-logo {
-  opacity: 1;
+    opacity: 1;
 }
 
 .quantity-input {
-  width: 100px;
+    width: 100px;
 }
 
 .new-icon {
@@ -106,40 +84,77 @@ section,
     border-radius: 50%;
     right: 5px;
 }
-  
-.new-icon, .lightbulb-container, .dark-background , #cart-icon, #cart-item-count {
+
+.new-icon,
+.lightbulb-container,
+.dark-background,
+#cart-icon,
+#cart-item-count {
     position: absolute;
 }
 
-.new-icon, .lightbulb-container.show-lightbulb, .dark-background {
+.new-icon,
+.lightbulb-container.show-lightbulb,
+.dark-background {
     top: 0;
 }
 
-.new-icon, .product-title, .quantity-button, .quantity-input {
+.new-icon,
+.product-title,
+.quantity-button,
+.quantity-input {
     font-size: 18px;
 }
 
-.new-icon, h1, p, #clock, .container, .product-price, .quantity-input {
+.new-icon,
+h1,
+p,
+#clock,
+.container,
+.product-price,
+.quantity-input {
     text-align: center;
 }
 
-.new-icon, header, .product-card, .product-price, .quantity-control, .quantity-button {
+.new-icon,
+header,
+.product-card,
+.product-price,
+.quantity-control,
+.quantity-button {
     display: flex;
 }
 
-.new-icon, section, .product-price, .quantity-control, .quantity-button, .product-image img {
+.new-icon,
+section,
+.product-price,
+.quantity-control,
+.quantity-button,
+.product-image img {
     justify-content: center;
 }
 
-.new-icon, header, section, .quantity-control, .quantity-button, .product-image img, .add-to-cart-container {
+.new-icon,
+header,
+section,
+.quantity-control,
+.quantity-button,
+.product-image img,
+.add-to-cart-container {
     align-items: center;
 }
 
-.new-icon, .lightbulb-container, .quantity-button, .add-to-cart-button {
+.new-icon,
+.lightbulb-container,
+.quantity-button,
+.add-to-cart-button {
     cursor: pointer;
 }
 
-.new-icon, .modal, .modal-content, .close {
+.new-icon,
+.modal,
+.modal-content,
+.close {
     z-index: 999;
 }
 
@@ -198,11 +213,15 @@ section {
     margin-top: 100px;
 }
 
-h1, p {
+h1,
+p {
     font-size: 52px;
 }
 
-h1, p, .quantity-button, .quantity-input {
+h1,
+p,
+.quantity-button,
+.quantity-input {
     color: #333;
 }
 
@@ -210,7 +229,11 @@ p {
     text-align: left;
 }
 
-p, .product-info p, .quantity-button, .quantity-input, .add-to-cart-button {
+p,
+.product-info p,
+.quantity-button,
+.quantity-input,
+.add-to-cart-button {
     font-size: 24px;
 }
 
@@ -229,11 +252,15 @@ hr {
     cursor: pointer;
 }
 
-.product-image img, .product-content {
+.product-image img,
+.product-content {
     margin: auto;
 }
 
-.product-image img, .quantity-button, .quantity-input, .add-to-cart-button {
+.product-image img,
+.quantity-button,
+.quantity-input,
+.add-to-cart-button {
     border-radius: 5px;
 }
 
@@ -251,12 +278,14 @@ hr {
     margin: 0 10px;
 }
 
-.quantity-button, .quantity-input {
+.quantity-button,
+.quantity-input {
     background: none;
     height: auto;
 }
 
-.quantity-button, .home-png-button img {
+.quantity-button,
+.home-png-button img {
     width: 50px;
 }
 
@@ -264,7 +293,9 @@ hr {
     border: 1px solid #FF3C00;
 }
 
-.quantity-button:focus, .quantity-input:focus, .add-to-cart-button:focus {
+.quantity-button:focus,
+.quantity-input:focus,
+.add-to-cart-button:focus {
     outline: none;
 }
 
@@ -298,11 +329,17 @@ hr {
         display: none;
     }
 
-    .product-image, .product-content {
+    .product-image,
+    .product-content {
         display: flex;
     }
 
-    .navbar-brand, .product-info p, #product-price, .quantity-button, .quantity-input, .add-to-cart-button {
+    .navbar-brand,
+    .product-info p,
+    #product-price,
+    .quantity-button,
+    .quantity-input,
+    .add-to-cart-button {
         font-size: 18px;
     }
 
@@ -326,15 +363,18 @@ hr {
         font-size: 36px;
     }
 
-    h1, .product-info p {
+    h1,
+    .product-info p {
         text-align: center;
     }
 
-    hr, .quantity-input {
+    hr,
+    .quantity-input {
         margin: 10px 0;
     }
 
-    .product-image, .product-content {
+    .product-image,
+    .product-content {
         justify-content: center;
         margin: auto;
     }

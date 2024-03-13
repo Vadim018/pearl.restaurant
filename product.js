@@ -4,8 +4,8 @@ $(document).ready(function () {
 
     $("#add-to-cart-button").on("click", function () {
         clickCount++;
-        
-        $(this).text("Added").css({"background-color": "green", "color": "white"});
+
+        $(this).text("Added").css({ "background-color": "green", "color": "white" });
 
         var interval = setInterval(function () {
             countdown--;
@@ -15,7 +15,7 @@ $(document).ready(function () {
         setTimeout(function () {
             clearInterval(interval);
             countdown = 1;
-            $("#add-to-cart-button").text("Buy item").css({"background-color": "", "color": ""});
+            $("#add-to-cart-button").text("Buy item").css({ "background-color": "", "color": "" });
         }, 1000);
     });
 });
@@ -72,70 +72,53 @@ document.addEventListener("DOMContentLoaded", function () {
         productDescription.textContent = productDetails.description;
         productPrice.textContent = `${productDetails.price} ₴`;
 
-    function updatePrice() {
-        const quantity = parseInt(quantityInput.value);
-        if (!isNaN(quantity)) {
-            const price = productDetails.price * quantity;
-            animatePriceChange(price);
+        function updatePrice() {
+            const quantity = parseInt(quantityInput.value);
+            if (!isNaN(quantity)) {
+                const price = productDetails.price * quantity;
+                animatePriceChange(price);
+            }
         }
-    }
 
-    document.querySelector('.quantity-input').addEventListener('input', () => {
-        updatePrice();
-    });
+        document.querySelector('.quantity-input').addEventListener('input', () => {
+            updatePrice();
+        });
 
-    document.querySelector('.quantity-button.decrease').addEventListener('click', () => {
-        let quantity = parseInt(quantityInput.value);
-        if (quantity > 1) {
-            quantity--;
+        document.querySelector('.quantity-button.decrease').addEventListener('click', () => {
+            let quantity = parseInt(quantityInput.value);
+            if (quantity > 1) {
+                quantity--;
+                quantityInput.value = quantity;
+                updatePrice();
+            }
+        });
+
+        document.querySelector('.quantity-button.increase').addEventListener('click', () => {
+            let quantity = parseInt(quantityInput.value);
+            quantity++;
             quantityInput.value = quantity;
             updatePrice();
-        }
-    });
+        });
 
-    document.querySelector('.quantity-button.increase').addEventListener('click', () => {
-        let quantity = parseInt(quantityInput.value);
-        quantity++;
-        quantityInput.value = quantity;
+        quantityInput.addEventListener("input", function () {
+            let inputValue = quantityInput.value;
+            inputValue = inputValue.replace(/[^0-9]/g, "");
+            inputValue = inputValue.replace(/^0+/, "1");
+            inputValue = inputValue === "" || inputValue === "0" ? "1" : inputValue;
+            quantityInput.value = inputValue;
+            updatePrice();
+        });
+
+        addToCartButton.addEventListener('click', function () {
+            const quantity = parseInt(quantityInput.value);
+            if (quantity > 0) {
+                const productToAdd = { ...productDetails, quantity };
+                const cartItems = JSON.parse(sessionStorage.getItem('selectedProducts')) || [];
+                cartItems.push(productToAdd);
+                sessionStorage.setItem('selectedProducts', JSON.stringify(cartItems));
+            }
+        });
         updatePrice();
-    });
-
-    quantityInput.addEventListener("input", function () {
-                let inputValue = quantityInput.value;
-                inputValue = inputValue.replace(/[^0-9]/g, "");
-                inputValue = inputValue.replace(/^0+/, "1");
-                inputValue = inputValue === "" || inputValue === "0" ? "1" : inputValue;
-                quantityInput.value = inputValue;
-                updatePrice();
-            });
-
-    addToCartButton.addEventListener('click', function () {
-        const quantity = parseInt(quantityInput.value);
-        if (quantity > 0) {
-            const productToAdd = { ...productDetails, quantity };
-            const cartItems = JSON.parse(sessionStorage.getItem('selectedProducts')) || [];
-            cartItems.push(productToAdd);
-            sessionStorage.setItem('selectedProducts', JSON.stringify(cartItems));
-        }
-    });
-    updatePrice();
-}
-
-setTimeout(function () {
-    document.getElementById("loading-screen").style.opacity = 0;
-    setTimeout(function () {
-        document.getElementById("loading-screen").style.display = "none";
-    }, 500);
-}, 0);
-});
-
-document.addEventListener("click", function (event) {
-    if (event.target.tagName === "A") {
-        event.preventDefault();
-        document.getElementById("loading-screen").classList.add("fade-out");
-        setTimeout(function () {
-            window.location.href = event.target.href;
-        }, 0);
     }
 });
 
@@ -143,14 +126,14 @@ const clock = document.getElementById('clock');
 const clockSound = document.getElementById('clockSound');
 clock.addEventListener('mouseenter', () => {
 
-if (clockSound.paused) {
+    if (clockSound.paused) {
         clockSound.play();
     }
 });
 
 clock.addEventListener('mouseleave', () => {
 
-if (!clockSound.paused) {
+    if (!clockSound.paused) {
         clockSound.pause();
         clockSound.currentTime = 0;
     }
@@ -205,14 +188,14 @@ function toggleLightbulb() {
 
 function setInitialState() {
     const isLightOn = localStorage.getItem('isLightOn');
-  
+
     if (isLightOn === 'true') {
-      lightbulbImage.src = 'img/light-off.png';
-      body.classList.add('dark-background');
-     
+        lightbulbImage.src = 'img/light-off.png';
+        body.classList.add('dark-background');
+
     } else {
-      lightbulbImage.src = 'img/light-on.png';
-      body.classList.remove('dark-background');
+        lightbulbImage.src = 'img/light-on.png';
+        body.classList.remove('dark-background');
     }
 }
 

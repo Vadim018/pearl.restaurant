@@ -15,8 +15,8 @@ function generateRandomPassword(length) {
 }
 
 function togglePasswordVisibility() {
-let passwordInput = document.getElementById('password');
-let toggleIcon = document.getElementById('togglePassword');
+    let passwordInput = document.getElementById('password');
+    let toggleIcon = document.getElementById('togglePassword');
 
     if (passwordInput.type === "password") {
         passwordInput.type = "text";
@@ -59,27 +59,10 @@ function validateForm() {
     }
 
     if (passwordInput.value.length < 8) {
-    alert('Password must contain at least 8 characters!');
-    return;
+        alert('Password must contain at least 8 characters!');
+        return;
     }
 
     alert('Registration is successful!');
     window.location.href = 'index.html';
 }
-
-setTimeout(function () {
-    document.getElementById("loading-screen").style.opacity = 0;
-    setTimeout(function () {
-      document.getElementById("loading-screen").style.display = "none";
-    }, 500);
-  }, 0);
-
-document.addEventListener("click", function (event) {
-  if (event.target.tagName === "A") {
-    event.preventDefault();
-    document.getElementById("loading-screen").classList.add("fade-out");
-    setTimeout(function () {
-      window.location.href = event.target.href;
-    }, 0);
-  }
-});

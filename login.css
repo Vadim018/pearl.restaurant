@@ -11,25 +11,6 @@ body {
     z-index: -1;
 }
 
-#loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #FFF;
-    z-index: 99999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.fade-out {
-    opacity: 0 !important;
-}
-
 .home a:focus,
 .user a:focus,
 .input-group-text img:focus,

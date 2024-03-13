@@ -1,34 +1,34 @@
 document.addEventListener("DOMContentLoaded", function () {
     const backToTopBtn = document.getElementById("backToTopBtn");
     backToTopBtn.addEventListener("click", scrollToTopWithEasing);
-  
+
     function scrollToTopWithEasing() {
-      const scrollDuration = 1000;
-      const startTime = performance.now();
-      const startScrollTop = document.documentElement.scrollTop;
-  
-      function scrollStep(timestamp) {
-        const currentTime = timestamp - startTime;
-        const scrollProgress = Math.min(currentTime / scrollDuration, 1);
-        const easeInOutProgress = easeInOutQuad(scrollProgress);
-        window.scrollTo(0, startScrollTop * (1 - easeInOutProgress));
-        if (currentTime < scrollDuration) {
-          requestAnimationFrame(scrollStep);
+        const scrollDuration = 1000;
+        const startTime = performance.now();
+        const startScrollTop = document.documentElement.scrollTop;
+
+        function scrollStep(timestamp) {
+            const currentTime = timestamp - startTime;
+            const scrollProgress = Math.min(currentTime / scrollDuration, 1);
+            const easeInOutProgress = easeInOutQuad(scrollProgress);
+            window.scrollTo(0, startScrollTop * (1 - easeInOutProgress));
+            if (currentTime < scrollDuration) {
+                requestAnimationFrame(scrollStep);
+            }
         }
-      }
-  
-      function easeInOutQuad(t) {
-        return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
-      }
-      requestAnimationFrame(scrollStep);
+
+        function easeInOutQuad(t) {
+            return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+        }
+        requestAnimationFrame(scrollStep);
     }
-  
+
     window.addEventListener("scroll", function () {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        backToTopBtn.style.display = "block";
-      } else {
-        backToTopBtn.style.display = "none";
-      }
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            backToTopBtn.style.display = "block";
+        } else {
+            backToTopBtn.style.display = "none";
+        }
     });
 });
 
@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (selectedCategory && categories[selectedCategory]) {
         categoryInfo.textContent = selectedCategory;
-    
+
         function openProductPage(product) {
             const productDetailsUrl = 'product.html';
             const productDetails = {
@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", function () {
             productImage.addEventListener("click", () => {
                 openProductPage(product);
             });
-    
+
             const quantityInput = productCard.querySelector(".quantity-input");
             const priceElement = productCard.querySelector(".product-price");
             quantityInput.addEventListener("input", function () {
@@ -223,37 +223,37 @@ document.addEventListener("DOMContentLoaded", function () {
                 quantityInput.value = inputValue;
                 updatePrice();
             });
-    
+
             productCard.querySelector(".decrease").addEventListener("click", () => {
                 if (quantityInput.value > 1) {
                     quantityInput.value--;
                     updatePrice();
                 }
             });
-    
+
             productCard.querySelector(".increase").addEventListener("click", () => {
                 quantityInput.value++;
                 updatePrice();
             });
-    
+
             quantityInput.addEventListener("input", updatePrice);
             productCard.querySelector(".add-to-cart-button").addEventListener("click", () => {
                 const quantity = parseInt(quantityInput.value);
-                const cartItem = { 
-                    name: product.name, 
-                    price: product.price, 
-                    quantity: quantity 
+                const cartItem = {
+                    name: product.name,
+                    price: product.price,
+                    quantity: quantity
                 };
                 selectedProducts.push(cartItem);
                 sessionStorage.setItem("selectedProducts", JSON.stringify(selectedProducts));
-                
+
                 if (selectedProducts.length === 1) {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 }
-            
+
                 updateCartItemCount();
             });
-    
+
             function updatePrice() {
                 const quantity = parseFloat(quantityInput.value);
                 if (isNaN(quantity) || quantity <= 0) {
@@ -266,21 +266,21 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                 }
             }
-    
+
             function animatePriceChange(newPrice) {
                 const currentPrice = parseFloat(priceElement.textContent.replace(' ₴', ''));
                 const priceDifference = newPrice - currentPrice;
                 let startTimestamp;
                 const duration = 500;
                 const finalProgress = 1;
-    
+
                 function step(timestamp) {
                     if (!startTimestamp) startTimestamp = timestamp;
                     const elapsed = timestamp - startTimestamp;
                     const progress = Math.min(elapsed / duration, finalProgress);
                     const interpolatedPrice = currentPrice + priceDifference * progress;
                     priceElement.textContent = `${interpolatedPrice.toFixed(0)} ₴`;
-    
+
                     if (progress < finalProgress) {
                         requestAnimationFrame(step);
                     }
@@ -297,12 +297,12 @@ document.addEventListener("DOMContentLoaded", function () {
         emptyCategoryMessage.style.textAlign = "center";
         emptyCategoryMessage.style.marginTop = "200px";
     }
-    
+
     function updateCartItemCount() {
         const cartItemCount = selectedProducts.reduce((total, item) => total + item.quantity, 0);
         const cartIcon = document.getElementById("cart-icon");
         const cartItemCountSpan = document.getElementById("cart-item-count");
-    
+
         if (cartItemCount > 0) {
             cartIcon.style.display = "block";
             cartItemCountSpan.textContent = cartItemCount;
@@ -403,24 +403,7 @@ document.addEventListener("DOMContentLoaded", function () {
             logo.style.display = "none";
         }
     });
-
-    setTimeout(function () {
-        document.getElementById("loading-screen").style.opacity = 0;
-            setTimeout(function () {
-                document.getElementById("loading-screen").style.display = "none";
-            }, 500);
-        }, 0);
-    });
-
-    document.addEventListener("click", function (event) {
-        if (event.target.tagName === "A") {
-            event.preventDefault();
-            document.getElementById("loading-screen").classList.add("fade-out");
-            setTimeout(function () {
-                window.location.href = event.target.href;
-            }, 0);
-        }
-    });   
+});
 
 const lightbulbContainer = document.getElementById('lightbulb-container');
 const lightbulb = document.getElementById('lightbulb');
@@ -445,20 +428,20 @@ document.addEventListener('DOMContentLoaded', setInitialState);
 function toggleLightbulb() {
     const isLightOn = body.classList.contains('dark-background');
     audioElement.currentTime = 0;
-  
+
     if (isLightOn) {
-      lightbulbImage.src = 'img/light-on.png';
-      body.classList.remove('dark-background');
-      localStorage.setItem('isLightOn', 'false');
+        lightbulbImage.src = 'img/light-on.png';
+        body.classList.remove('dark-background');
+        localStorage.setItem('isLightOn', 'false');
     } else {
-      lightbulbImage.src = 'img/light-off.png';
-      body.classList.add('dark-background');
-      localStorage.setItem('isLightOn', 'true');
+        lightbulbImage.src = 'img/light-off.png';
+        body.classList.add('dark-background');
+        localStorage.setItem('isLightOn', 'true');
     }
     setTimeout(() => {
-      audioElement.play();
+        audioElement.play();
     }, 0);
-  }
+}
 
 lightbulbContainer.addEventListener('mouseenter', () => {
     lightbulbContainer.classList.add('show-lightbulb');

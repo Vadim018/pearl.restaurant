@@ -6,25 +6,6 @@ body {
     background-size: 200% 200%;
 }
 
-#loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #FFF;
-    z-index: 99999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.fade-out {
-    opacity: 0 !important;
-}
-
 .main {
     display: flex;
     justify-content: space-between;
@@ -123,7 +104,7 @@ input {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 5px 0 0 0 ;
+    margin: 5px 0 0 0;
     width: 100%;
     padding: 10px;
     border-radius: 50px;
@@ -158,7 +139,8 @@ input {
         margin-bottom: 10px;
     }
 
-    h1, .main a p {
+    h1,
+    .main a p {
         font-size: 24px;
     }
 
