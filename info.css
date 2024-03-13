@@ -10,6 +10,17 @@ body {
   user-select: none;
 }
 
+.map {
+  width: 100%;
+  height: 500px;
+  background-image: url('https: //www.google.com/maps');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  outline: none;
+}
+
 h4 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 36px;
@@ -208,8 +219,64 @@ h3 {
 }
 
 .dark-background .contact-info a,
-.contact-info {
+.dark-background .contact-info {
   color: #FFC65C;
+}
+
+.dark-background .form p {
+  color: #333;
+}
+
+/* ORDER */
+.blocks {
+  display: flex;
+}
+
+.block {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order img {
+  width: 350px;
+}
+
+.form {
+  background-color: #FFF;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
+  width: 430px;
+  height: 630px;
+  color: #333;
+  font-size: 18px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.form p {
+  margin: 5px;
+  text-align: left;
+}
+
+.form h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  text-align: center;
+  transform: rotate(-5deg);
+  text-shadow: 4px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.form h5 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  text-align: center;
 }
 
 /* FOOTER */
@@ -257,7 +324,7 @@ h3 {
 }
 
 .social-icon:hover {
-  color: #F00;
+  color: #00AAFF;
 }
 
 @keyframes gradientBG {
@@ -390,5 +457,48 @@ h3 {
 
   .social-icon:hover {
     color: #FFF;
+  }
+
+  .blocks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto 10px;
+  }
+
+  .block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .order img {
+    width: 100%;
+  }
+
+  .form {
+    background-color: #FFF;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    width: 100%;
+    z-index: -1;
+    padding: 10px;
+  }
+
+  .form p {
+    margin: 10px auto;
+    font-size: 18px;
+  }
+
+  .form h4 {
+    margin: 20px auto;
+    font-size: 18px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .form h5 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 24px;
+    margin: 20px auto;
   }
 }
