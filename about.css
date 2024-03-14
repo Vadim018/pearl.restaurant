@@ -7,6 +7,12 @@ body {
     color: #FFF;
     margin: 0;
     padding: 0;
+    user-select: none;
+}
+
+h4 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 36px;
 }
 
 /* HEADER */

@@ -3,7 +3,7 @@ body {
     color: #FFF;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #ABCAFF, #FFFbb0, #FDE383, #FFEBB9);
+    background: linear-gradient(to bottom, #76D6FF, #2AC5FD);
     background-size: 400% 400%;
     overflow-x: hidden;
 }
@@ -15,12 +15,12 @@ body {
 }
 
 .card {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
     background-color: transparent;
     text-align: center;
+    width: 500px;
 }
 
-.card,
 .remove-item-button::before {
     width: 50%;
 }
@@ -38,8 +38,7 @@ body {
 h1,
 h4,
 p,
-#close-button,
-#cart-total {
+#close-button {
     color: #333;
 }
 
@@ -104,13 +103,14 @@ p {
 }
 
 #cart-total {
-    font-weight: bold;
-    font-size: 18px;
+    color: #000;
+    font-size: 24px;
 }
 
 .btn {
     position: relative;
-    width: 30%;
+    width: 100%;
+    margin: 5px;
 }
 
 @media screen and (max-width: 720px) {
@@ -125,24 +125,18 @@ p {
 
     .remove-item-button {
         color: #FF0B00;
+        width: 100%;
     }
 
     #clear-cart-button {
         transition: none;
     }
 
-    #clear-cart-button,
-    #clear-cart-button:hover {
-        border: none;
-    }
-
     #close-button {
         right: 10px;
     }
 
-    .btn-success,
-    .btn-danger {
-        width: 50%;
-        margin: 5px;
+    #cart-total {
+        font-size: 18px;
     }
 }

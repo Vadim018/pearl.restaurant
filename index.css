@@ -1,6 +1,6 @@
 body {
     font-family: 'Playpen Sans', cursive;
-    background: linear-gradient(to right, #3FEA80, #2EFA8A);
+    background: linear-gradient(to right, #76D6FF, #2AC5FD);
     background-size: 400% 400%;
     animation: gradientBG 5s infinite;
     overflow-x: hidden;
@@ -227,7 +227,7 @@ h2 {
 
 /* DARK THEME */
 .dark-background .btn-group-menu::before {
-    background: linear-gradient(to right, #3FEA80, #2EFA8A);
+    background: linear-gradient(to right, #76D6FF, #2AC5FD);
 }
 
 .dark-background .lightbulb img {

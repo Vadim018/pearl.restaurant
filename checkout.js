@@ -27,11 +27,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const listItem = document.createElement("li");
       listItem.classList.add("list-group-item", "d-flex", "justify-content-between", "lh-sm");
       listItem.innerHTML = `
-              <div>
-                  <h6 class="my-0">${item.name}</h6>
-                  <p class="row-p">${item.quantity} x ${item.price} ₴</p>
-              </div>
-              <span class="text-body-secondary">${item.price * item.quantity} ₴</span>`;
+          <div>
+              <h6 class="my-0">${item.name}</h6>
+              <p class="row-p">${item.quantity} x ${item.price} ₴</p>
+          </div>
+          <span class="text-body-secondary">${item.price * item.quantity} ₴</span>`;
       totalQuantity += item.quantity;
       totalCost += item.price * item.quantity;
       selectedProductsList.appendChild(listItem);
@@ -40,10 +40,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const totalCostWithDelivery = selfPickupCheckbox.checked ? totalCost : totalCost + deliveryCost;
     animatePriceChange(deliveryCostElement, parseFloat(deliveryCostElement.textContent) || 0, selfPickupCheckbox.checked ? 0 : deliveryCost);
     animatePriceChange(totalCostWithDeliveryElement, parseFloat(totalCostWithDeliveryElement.textContent) || 0, totalCostWithDelivery);
-    cartBadge.textContent = totalQuantity;
-    totalCostElement.textContent = totalCost.toFixed(0);
-    deliveryCostElement.textContent = selfPickupCheckbox.checked ? 0 : deliveryCost;
-    totalCostWithDeliveryElement.textContent = totalCostWithDelivery.toFixed(0);
+    animateCartBadge(totalQuantity);
+    animateTotalCost(totalCost);
+    animateTotalCostWithDelivery(totalCostWithDelivery);
     return totalQuantity;
   }
 
@@ -60,6 +59,67 @@ document.addEventListener("DOMContentLoaded", function () {
       element.textContent = `${interpolatedPrice.toFixed(0)}`;
 
       if (progress < finalProgress) {
+        requestAnimationFrame(step);
+      }
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  function animateCartBadge(newTotalQuantity) {
+    const currentTotalQuantity = parseInt(cartBadge.textContent) || 0;
+    const increment = newTotalQuantity - currentTotalQuantity;
+    let current = currentTotalQuantity;
+    let count = 0;
+    const speed = 50;
+
+    if (increment === 0) return;
+
+    const timer = setInterval(function () {
+      current += increment > 0 ? 1 : -1;
+      cartBadge.textContent = current;
+      count++;
+
+      if (count === Math.abs(increment) || current === newTotalQuantity) {
+        clearInterval(timer);
+      }
+    }, speed);
+  }
+  function animateTotalCost(newTotalCost) {
+    const currentTotalCost = parseFloat(totalCostElement.textContent) || 0;
+    const difference = newTotalCost - currentTotalCost;
+    let startTimestamp;
+    const duration = 1000;
+
+    function step(timestamp) {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const elapsed = timestamp - startTimestamp;
+      const progress = Math.min(elapsed / duration, 1);
+      const interpolatedCost = currentTotalCost + difference * progress;
+      totalCostElement.textContent = `${interpolatedCost.toFixed(0)} ₴`;
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      }
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  function animateTotalCostWithDelivery(newTotalCostWithDelivery) {
+    const currentTotalCostWithDelivery = parseFloat(totalCostWithDeliveryElement.textContent) || 0;
+    const difference = newTotalCostWithDelivery - currentTotalCostWithDelivery;
+    let startTimestamp;
+    const duration = 1000;
+
+    function step(timestamp) {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const elapsed = timestamp - startTimestamp;
+      const progress = Math.min(elapsed / duration, 1);
+      const interpolatedCost = currentTotalCostWithDelivery + difference * progress;
+      totalCostWithDeliveryElement.textContent = `${interpolatedCost.toFixed(0)} ₴`;
+
+      if (progress < 1) {
         requestAnimationFrame(step);
       }
     }
