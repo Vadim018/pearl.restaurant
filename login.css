@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background: linear-gradient(to bottom, #76D6FF, #2AC5FD);
+    background: linear-gradient(to right, #76D6FF, #2AC5FD);
     background-size: 400% 400%;
     animation: gradientBG 5s infinite;
     display: flex;

@@ -5,7 +5,6 @@ body {
     overflow-x: hidden;
     background: linear-gradient(to right, #76D6FF, #2AC5FD);
     user-select: none;
-    background-color: white;
     animation: fadeIn 1s ease-in-out;
 }
 

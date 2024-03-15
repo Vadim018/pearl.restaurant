@@ -153,10 +153,17 @@ button.navbar-toggler-icon {
     text-align: center;
     position: relative;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .category img {
     width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.category:hover img {
+    transform: scale(1.1);
+    filter: brightness(50%);
 }
 
 .category-name {
@@ -164,12 +171,17 @@ button.navbar-toggler-icon {
     opacity: 0;
     position: absolute;
     left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     transition: opacity 0.5s;
     pointer-events: none;
     z-index: 999;
-    top: 50%;
-    transform: translate(-50%, -50%);
     font-size: 52px;
+}
+
+.category:hover .category-name {
+    opacity: 1;
+    z-index: 999;
 }
 
 .category::before {
@@ -180,18 +192,22 @@ button.navbar-toggler-icon {
     content: "";
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    transition: opacity 0.5s;
+    transition: opacity 0.3s ease;
     pointer-events: none;
 }
 
 .category:hover::before {
     opacity: 1;
-    z-index: 999;
 }
 
-.category:hover .category-name {
-    opacity: 1;
+.category::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
 #backToTopBtn {
@@ -378,6 +394,11 @@ button.navbar-toggler-icon {
         background: rgba(0, 0, 0, 0.5);
         z-index: 999;
         opacity: 1;
+    }
+
+    .category:hover img {
+        transform: scale(1);
+        filter: brightness(100%);
     }
 
     #backToTopBtn img {

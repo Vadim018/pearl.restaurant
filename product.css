@@ -80,6 +80,9 @@ section {
     cursor: pointer;
     margin: auto;
     border-radius: 5px;
+    animation: bounce 1s infinite alternate ease-in-out;
+    box-shadow: -20px 50px 10px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
 }
 
 .product-content {
@@ -293,6 +296,16 @@ hr {
 
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-30px);
     }
 }
 

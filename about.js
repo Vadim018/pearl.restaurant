@@ -122,13 +122,13 @@ function setInitialState() {
 }
 
 function turnOnLight() {
-  lightbulbImage.src = 'https://cdn-icons-png.flaticon.com/128/3073/3073665.png?uid=R77081381&ga=GA1.1.1848467976.1701626084&semt=ais';
+  lightbulbImage.src = 'https://cdn-icons-png.freepik.com/256/11103/11103648.png?uid=R77081381&ga=GA1.1.140018474.1707206813&';
   body.classList.remove('dark-background');
   saveThemeState(false);
 }
 
 function turnOffLight() {
-  lightbulbImage.src = 'https://cdn-icons-png.flaticon.com/128/3592/3592067.png?uid=R77081381&ga=GA1.1.1848467976.1701626084&semt=ais';
+  lightbulbImage.src = 'https://cdn-icons-png.freepik.com/256/11056/11056934.png?uid=R77081381&ga=GA1.1.140018474.1707206813&';
   body.classList.add('dark-background');
   saveThemeState(true);
 }
