@@ -12,11 +12,21 @@ body {
     height: 100vh;
     z-index: -1;
     user-select: none;
+    animation: fadeIn 1s ease-in-out;
 }
 
-.home a:focus,
-.user a:focus,
-.input-group-text img:focus,
+.home a:focus {
+    outline: none;
+}
+
+.user a:focus {
+    outline: none;
+}
+
+.input-group-text img:focus {
+    outline: none;
+}
+
 .socials a:focus {
     outline: none;
 }
@@ -26,20 +36,24 @@ body {
     justify-content: space-between;
 }
 
-.home,
+.home {
+    display: flex;
+    align-items: center;
+}
+
 .user {
     display: flex;
     align-items: center;
 }
 
-.home img,
 .user img {
     filter: invert(100%);
+    width: 30px;
 }
 
-.home img,
-.user img {
+.home img {
     width: 30px;
+    filter: invert(100%);
 }
 
 .login-container {
@@ -114,7 +128,7 @@ input:focus {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: auto;
+    margin: 50px auto;
     width: 100%;
     background-color: transparent;
     padding: 10px;
@@ -148,6 +162,7 @@ input:focus {
 
 hr {
     border: 2px solid #FFF;
+    margin-bottom: 100px;
 }
 
 @keyframes gradientBG {
@@ -161,6 +176,16 @@ hr {
 
     100% {
         background-position: 0% 50%;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
@@ -180,19 +205,23 @@ hr {
         justify-content: space-between;
     }
 
-    .home,
+    .home {
+        display: flex;
+        align-items: center;
+    }
+
     .user {
         display: flex;
         align-items: center;
     }
 
-    .home img,
     .user img {
         filter: invert(100%);
     }
 
     .home img {
         width: 35px;
+        filter: invert(100%);
     }
 
     .user img {

@@ -5,6 +5,8 @@ body {
     overflow-x: hidden;
     background: linear-gradient(to right, #76D6FF, #2AC5FD);
     user-select: none;
+    background-color: white;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .block1 {
@@ -59,12 +61,18 @@ ol {
     color: #000;
 }
 
-li,
+li {
+    font-size: 18px;
+}
+
 label {
     font-size: 18px;
 }
 
-input:focus,
+input:focus {
+    outline: none;
+}
+
 button:focus {
     outline: none;
 }
@@ -77,7 +85,6 @@ p {
     margin: 10px;
 }
 
-/* BACK TO TOP BUTTON */
 #backToTopBtn {
     position: fixed;
     padding: 0;
@@ -103,6 +110,16 @@ p {
 
 #backToTopBtn:hover {
     box-shadow: 0 0 20px rgba(255, 255, 255, 255);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width: 720px) {

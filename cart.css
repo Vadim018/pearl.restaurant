@@ -6,6 +6,21 @@ body {
     background: linear-gradient(to bottom, #76D6FF, #2AC5FD);
     background-size: 400% 400%;
     overflow-x: hidden;
+    animation: fadeIn 1s ease-in-out;
+    user-select: none;
+}
+
+h1 {
+    color: #333;
+}
+
+h4 {
+    color: #333;
+}
+
+p {
+    margin: 10px;
+    color: #333;
 }
 
 .container {
@@ -19,31 +34,8 @@ body {
     background-color: transparent;
     text-align: center;
     width: 500px;
-}
-
-.remove-item-button::before {
-    width: 50%;
-}
-
-.card,
-#cart-items {
     padding: 20px;
-}
-
-.card,
-#cart-items {
     border-radius: 10px;
-}
-
-h1,
-h4,
-p,
-#close-button {
-    color: #333;
-}
-
-p {
-    margin: 10px;
 }
 
 #close-button {
@@ -52,15 +44,11 @@ p {
     font-size: 24px;
     border-radius: 50%;
     text-decoration: none;
-}
-
-#close-button,
-.remove-item-button::before {
+    color: #333;
     position: absolute;
+    cursor: pointer;
 }
 
-#close-button,
-.remove-item-button,
 #clear-cart-button {
     cursor: pointer;
 }
@@ -69,15 +57,14 @@ p {
     background-color: #FFF;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: opacity 0.3s ease;
-}
-
-#cart-items,
-#cart-total {
     margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .remove-item-button {
     border: none;
+    cursor: pointer;
     background: none;
     color: #980E00;
     position: relative;
@@ -86,6 +73,8 @@ p {
 }
 
 .remove-item-button::before {
+    position: absolute;
+    width: 50%;
     content: "";
     top: 0;
     left: 0;
@@ -105,12 +94,23 @@ p {
 #cart-total {
     color: #000;
     font-size: 24px;
+    margin: 10px;
 }
 
 .btn {
     position: relative;
     width: 100%;
     margin: 5px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width: 720px) {

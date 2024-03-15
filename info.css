@@ -8,6 +8,27 @@ body {
   margin: 0;
   padding: 0;
   user-select: none;
+  animation: fadeIn 1s ease-in-out;
+}
+
+h2 {
+  font-size: 72px;
+  color: #333;
+  text-align: center;
+  margin: 20px;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #000;
+}
+
+h4 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 36px;
 }
 
 .map {
@@ -21,12 +42,6 @@ body {
   outline: none;
 }
 
-h4 {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 36px;
-}
-
-/* HEADER */
 header {
   background-color: #333;
   height: 300px;
@@ -36,7 +51,6 @@ header {
   padding: 10px;
 }
 
-/* LIGHTBULB */
 .lightbulb img {
   top: 20px;
   right: 20px;
@@ -46,7 +60,6 @@ header {
   cursor: pointer;
 }
 
-/* BUTTONS */
 .buttons {
   justify-content: start;
   margin: 200px 0 0 30px;
@@ -72,22 +85,6 @@ header {
   border-bottom-color: #00AAFF;
 }
 
-h2 {
-  font-size: 72px;
-  color: #333;
-  text-align: center;
-  margin: 20px;
-}
-
-h3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #000;
-}
-
-/* DELIVERY */
 .delivery {
   margin: 10px;
   border-radius: 15px;
@@ -114,7 +111,6 @@ h3 {
   filter: invert(100%);
 }
 
-/* SCHEDULE */
 .container {
   border: 5px solid #333;
   border-radius: 15px;
@@ -136,7 +132,6 @@ h3 {
   color: #333;
 }
 
-/* CONTACTS */
 .contact-section {
   width: 50%;
   margin: 20px auto;
@@ -164,7 +159,6 @@ h3 {
   color: #FFF;
 }
 
-/* BACK TO TOP BUTTON */
 #backToTopBtn {
   color: transparent;
   cursor: pointer;
@@ -192,7 +186,6 @@ h3 {
   box-shadow: 0 0 20px rgba(255, 255, 255, 255);
 }
 
-/* DARK THEME */
 .dark-background .lightbulb-img {
   transform: rotate(180deg);
 }
@@ -227,7 +220,6 @@ h3 {
   color: #333;
 }
 
-/* ORDER */
 .blocks {
   display: flex;
 }
@@ -279,7 +271,6 @@ h3 {
   text-align: center;
 }
 
-/* FOOTER */
 .footer {
   background-color: #333;
   color: #FFF;
@@ -338,6 +329,16 @@ h3 {
 
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 

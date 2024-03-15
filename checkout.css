@@ -4,6 +4,12 @@ body {
   padding: 0;
   background: linear-gradient(to bottom, #76D6FF, #2AC5FD);
   background-size: 400% 400%;
+  animation: fadeIn 1s ease-in-out;
+  user-select: none;
+}
+
+h2 {
+  color: #FFF;
 }
 
 .header-container {
@@ -16,10 +22,6 @@ body {
 
 .header-container a {
   text-decoration: none;
-}
-
-h2 {
-  color: #FFF;
 }
 
 #main-container {
@@ -64,10 +66,11 @@ h2 {
   height: auto;
 }
 
-#loader-container img,
-#successIcon,
-#okButton,
-.pay-p {
+#successIcon {
+  display: none;
+}
+
+#okButton {
   display: none;
 }
 
@@ -83,6 +86,7 @@ h2 {
 }
 
 #loader-container img {
+  display: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,7 +117,10 @@ h2 {
   color: #4CAF50;
 }
 
-.btn1:focus,
+.btn1:focus {
+  outline: none;
+}
+
 .form-check-label:focus {
   outline: none;
 }
@@ -246,6 +253,16 @@ p {
   font-size: 14px;
   color: #555;
   font-weight: bold;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes spin {
