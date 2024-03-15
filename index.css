@@ -45,8 +45,8 @@ button.navbar-toggler-icon {
 /* LIGHTBULB */
 .lightbulb-container {
     top: 0;
-    right: -50px;
-    transform: translateY(0);
+    left: 50%;
+    transform: translateX(-50%) translateY(-50px);
     transition: transform 0.3s ease, top 0.3s ease;
     z-index: 9999;
     cursor: pointer;
@@ -70,7 +70,7 @@ button.navbar-toggler-icon {
 }
 
 .lightbulb:hover {
-    transform: translateX(-40px);
+    transform: translateY(40px);
 }
 
 .hide-lightbulb-button {

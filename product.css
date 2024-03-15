@@ -159,9 +159,9 @@ section,
 }
 
 .lightbulb-container {
-    top: -50px;
+    top: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(-50px);
     transition: transform 0.3s ease, top 0.3s ease;
     z-index: 2;
 }
@@ -175,7 +175,7 @@ section,
 }
 
 .lightbulb:hover {
-    transform: translateY(-10px);
+    transform: translateY(40px);
 }
 
 .lightbulb-container:not(.show-lightbulb) .hide-lightbulb-button {

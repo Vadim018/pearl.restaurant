@@ -90,10 +90,10 @@ function setInitialState() {
   const isLightOn = localStorage.getItem('isLightOn');
 
   if (isLightOn === 'true') {
-    lightbulbImage.src = 'img/light-off2.png';
+    lightbulbImage.src = 'img/light-off.png';
     body.classList.add('dark-background');
   } else {
-    lightbulbImage.src = 'img/light-on2.png';
+    lightbulbImage.src = 'img/light-on.png';
     body.classList.remove('dark-background');
   }
 }
@@ -106,11 +106,11 @@ function toggleLightbulb() {
   audioElement.currentTime = 0;
 
   if (isLightOn) {
-    lightbulbImage.src = 'img/light-on2.png';
+    lightbulbImage.src = 'img/light-on.png';
     body.classList.remove('dark-background');
     localStorage.setItem('isLightOn', 'false');
   } else {
-    lightbulbImage.src = 'img/light-off2.png';
+    lightbulbImage.src = 'img/light-off.png';
     body.classList.add('dark-background');
     localStorage.setItem('isLightOn', 'true');
   }
