@@ -56,12 +56,12 @@ h1 {
 }
 
 ol {
-    margin: 20px;
     color: #000;
 }
 
 li {
     font-size: 18px;
+    list-style: none;
 }
 
 label {

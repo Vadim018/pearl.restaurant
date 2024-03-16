@@ -128,10 +128,6 @@ p {
         width: 100%;
     }
 
-    #clear-cart-button {
-        transition: none;
-    }
-
     #close-button {
         right: 10px;
     }

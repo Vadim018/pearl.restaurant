@@ -386,21 +386,6 @@ function updateDeliveryCost() {
   }
 }
 
-function submitComment() {
-  const commentContent = document.getElementById('orderComment').value.trim();
-
-  if (commentContent.length === 0) {
-    alert('Please enter your comment!');
-    return;
-  }
-
-  const currentTime = new Date().toLocaleTimeString();
-  const commentSection = document.getElementById('commentsSection');
-  const commentHtml = `<p><strong>${currentTime}:</strong> ${commentContent}</p>`;
-  commentSection.innerHTML += commentHtml;
-  document.getElementById('orderComment').value = '';
-}
-
 document.addEventListener("DOMContentLoaded", function () {
   let cashRadio = document.getElementById("cash");
   let creditRadio = document.getElementById("credit");
@@ -508,7 +493,7 @@ function isCartEmpty() {
 
 function hideElements() {
   document.getElementById('selected-products-list').style.display = 'none';
-  document.getElementById('commentsSection').style.display = 'none';
+
   document.querySelector('.header-container').style.display = 'none';
   document.getElementById('orderForm').style.display = 'none';
 }

@@ -49,14 +49,6 @@
                     <p>Cart: <span id="total-cost"></span> ₴</p>
                     <p>Delivery: <span id="delivery-cost"></span> ₴</p>
                     <p>Total: <span id="total-cost-with-delivery"></span> ₴</p>
-                    <hr class="my-4">
-                    <h4 class="mb-3">Comments</h4>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="orderComment"
-                            placeholder="Type your comment here...">
-                    </div>
-                    <button class="btn btn-primary" onclick="submitComment()">Submit Comment</button>
-                    <div id="commentsSection" class="mt-4"></div>
                 </div>
                 <div class="col-md-7 col-lg-8">
                     <h4 class="mb-3">To arrange an order</h4>
@@ -66,7 +58,7 @@
                                 <label for="firstName" class="form-label">First name</label>
                                 <input type="text" class="form-control" id="firstName" placeholder="Bond Filter"
                                     value="" maxlength="50" required>
-                                <div class="invalid-feedback">Please enter your name!</div>
+                                <div class="invalid-feedback">Please enter your name</div>
                             </div>
                             <div class="col-12 mb-3">
                                 <label for="phone" class="form-label">Phone</label>
@@ -77,20 +69,20 @@
                                     </span>
                                     <input type="tel" class="form-control" id="phone" placeholder="067-123-43-21"
                                         maxlength="13" required>
-                                    <div class="invalid-feedback">Please enter your phone!</div>
+                                    <div class="invalid-feedback">Please enter your phone</div>
                                 </div>
                             </div>
                             <div class="col-12 mb-3">
                                 <label for="email" class="form-label">Email</label>
                                 <input type="email" class="form-control" id="email" placeholder="pearl.rest@gmail.com"
                                     maxlength="50" required>
-                                <div class="invalid-feedback">Please enter your email!</div>
+                                <div class="invalid-feedback">Please enter your email</div>
                             </div>
                             <div class="col-12 mb-3">
                                 <label for="address" class="form-label">Address</label>
                                 <input type="text" class="form-control" id="address" placeholder="Kyiv Street 1, Kyiv"
                                     maxlength="50" required>
-                                <div class="invalid-feedback">Please enter your address!</div>
+                                <div class="invalid-feedback">Please enter your address</div>
                             </div>
                         </div>
                         <div id="notificationContainer"></div>
